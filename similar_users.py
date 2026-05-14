@@ -9,7 +9,7 @@ def find_similar_movies(movie_id):
     similar_user_recs = ratings[(ratings["userId"].isin(similar_users)) & (ratings["rating"] > 4)]["movieId"]
     similar_user_recs = similar_user_recs.value_counts() / len(similar_users)
 
-    similar_user_recs = similar_user_recs[similar_user_recs > .10]
+    similar_user_recs = similar_user_recs[similar_user_recs > .05]
     all_users = ratings[(ratings["movieId"].isin(similar_user_recs.index)) & (ratings["rating"] > 4)]
     all_user_recs = all_users["movieId"].value_counts() / len(all_users["userId"].unique())
     rec_percentages = pd.concat([similar_user_recs, all_user_recs], axis=1)
