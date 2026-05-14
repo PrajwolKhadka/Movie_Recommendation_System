@@ -5,8 +5,7 @@ def tfidf_class():
     movie_csv=load_movies()
     vectorizer = TfidfVectorizer(ngram_range=(1,2))
     tfidf = vectorizer.fit_transform(movie_csv["clean_title"])
-    return tfidf
-
+    return vectorizer,tfidf
 
 # POTTER THE HARRY
 # 0       1    0
@@ -18,7 +17,6 @@ def tfidf_class():
 # log(3/1)     log(3/3)   log(3/2)
 # log(3/1)     log(3/3)   log(3/2)
 
-
 # TF*IDF
 
 # POTTER   THE      HARRY
@@ -26,9 +24,7 @@ def tfidf_class():
 # 0.477    00       0 .176      1.0
 # 0       0         0.176       0.176
 
-
 # Harry Potter
-
 
 # THE 
 # THE HARRY 
