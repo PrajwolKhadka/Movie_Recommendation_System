@@ -36,7 +36,7 @@ Download the **ml-25m.zip** file using the link below:
 3. Move `movies.csv` and `ratings.csv` inside the `ml-25m` folder
 
 ## 📁 Project Structure
-![Project Structure](image.png) 
+![Project Structure](image.png)
 
 1. **Clone the repository**
    ```bash
