@@ -44,8 +44,11 @@ Movie_Recommendation_System/
 ├── search_function.py        # Search functionality
 ├── similar_users.py          # Collaborative filtering logic
 ├── rating_movie.py           # Loads ratings data
-└── ml-25m/                   # Dataset folder (movies.csv + ratings.csv)
-text## 🚀 How to Run
+├── image.png
+├── image1.png
+└── ml-25m/
+    ├── movies.csv
+    └── ratings.csv
 
 1. **Clone the repository**
    ```bash
