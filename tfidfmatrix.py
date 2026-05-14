@@ -1,8 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
-from data_loader import load_movies
 
-def tfidf_class():
-    movie_csv=load_movies()
+def tfidf_class(movie_csv):
     vectorizer = TfidfVectorizer(ngram_range=(1,2))
     tfidf = vectorizer.fit_transform(movie_csv["clean_title"])
     return vectorizer,tfidf
